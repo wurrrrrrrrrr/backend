@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./ImageUploader.css";
 
-export default function ImageUploader() {
+export default function ImageUploader({setIfShowModal}) {
   const [imagePreview, setImagePreview] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -49,6 +49,7 @@ export default function ImageUploader() {
       </div>
       <div className="button-group">
         <input type="file" accept="image/*" onChange={handleImageChange} className="file-input" />
+        <button onClick={() => setIfShowModal(true)}>Save</button>
         <button onClick={uploadImage} className="upload-button" disabled={loading}>
           {loading ? "上傳中..." : "提交"}
         </button>

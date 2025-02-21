@@ -60,7 +60,11 @@
     border-radius: 5px;
 }
 
-p {
+.image-uploader p {
     margin-left: 6px;
     color: white;
+}
+
+.image-uploader button:hover{
+    background-color: red;
 }

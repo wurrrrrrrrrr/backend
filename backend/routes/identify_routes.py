@@ -95,3 +95,26 @@ def create_face_recognition_module(app):
             })
         except Exception as e:
             return jsonify({"error": f"預測過程中發生錯誤: {str(e)}"}), 500
+
+    @app.route('/saveData', methods=['POST'])
+    def save_data():
+        try:
+            # 取得前端回傳資料
+            data = request.get_json()
+            name = data.get('name')
+            glaucoma = data.get('glaucoma')
+            date = data.get('date')
+
+            print(data)
+            if glaucoma == "yes":
+                glaucoma = True
+            else:
+                glaucoma = False
+
+            new_data = Glaucoma(Patient_name = name, Date = date, If_glaucoma = glaucoma)
+            db.session.add(new_data)
+            db.session.commit()
+            return jsonify({"message": "Save data successful"}), 200
+        except Exception as e:
+            return jsonify({"error": f"儲存資料過程中發生錯誤: {str(e)}"}), 500
+
