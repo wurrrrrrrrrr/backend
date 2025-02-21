@@ -1,0 +1,19 @@
+.background{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+}
