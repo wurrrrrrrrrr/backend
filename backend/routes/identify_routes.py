@@ -20,7 +20,7 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def create_face_recognition_module(app):
-    PATH = r"/home/wu/PYTHON-FLASK/resnet50_weights.pth"
+    PATH = r"resnet50_weights.pth"
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     # ✅ 檢查權重檔是否存在
@@ -83,6 +83,7 @@ def create_face_recognition_module(app):
             with torch.no_grad():
                 outputs = model(img)
                 probabilities = torch.nn.functional.softmax(outputs[0], dim=0)
+                print(probabilities)
                 predicted_index = torch.argmax(probabilities).item()
                 predicted_name = class_names[predicted_index]
                 confidence = round(probabilities[predicted_index].item() * 100, 2)

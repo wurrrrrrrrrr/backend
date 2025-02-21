@@ -1,11 +1,13 @@
-.ImageUploader {
+.image-uploader {
     width: 30vw;
     align-self: center;
     display: grid;
     grid-template-rows: 30vw auto;
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
-.button_group {
+.button-group {
     padding-top: 10px;
     display: flex;
     justify-content: space-between; /* Moves input to left, button to right */
@@ -14,14 +16,16 @@
     width: 100%;
 }
 
-.button_group input {
-    background-color: white;
+.button-group input {
+    background-color: transparent;
     font-size: medium;
     border-radius: 5px;
     padding: 5px;
+    margin-left: 6px;
+    margin-bottom: 3px;
 }
 
-.button_group .button {
+.button-group button {
     border-radius: 3px;
     font-size: medium;
     padding: 5px 10px;
@@ -29,13 +33,16 @@
     color: white;
     border: none;
     cursor: pointer;
+    margin-right: 6px;
+    margin-bottom: 3px;
+    height: max-content;
 } 
 
 .button_group .button:hover {
     background-color: #0056b3;
 }
 
-.Image_frame {
+.image-frame {
     width: 100%;
     height: 100%;
     background-color: #e2e9e9;
@@ -51,4 +58,9 @@
     height: 100%;
     object-fit: contain; /* Ensures the image fully covers the container */
     border-radius: 5px;
+}
+
+p {
+    margin-left: 6px;
+    color: white;
 }
