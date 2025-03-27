@@ -5,7 +5,18 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --clr-primary-5: hsl(42, 78%, 60%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+
+
+
+  /* grey used for paragraphs */
+
+  --clr-grey-6: hsl(209, 23%, 60%);
+
+  --clr-white: #fff;
+  background-color: hsl(210, 36%, 96%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -34,6 +45,10 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+h2 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
 
 button {
   border-radius: 8px;
@@ -46,6 +61,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
