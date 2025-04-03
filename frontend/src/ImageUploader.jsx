@@ -59,9 +59,9 @@ export default function ImageUploader({setIfShowModal}) {
 
       {response && (
         <div className="response-box">
-          <p><strong>訊息：</strong> {response.message}</p>
-          <p><strong>姓名：</strong> {response.name}</p>
-          <p><strong>信心度：</strong> {response.confidence}</p>
+          <p style={{ color: "black" }}><strong>訊息：</strong> {response.message}</p>
+          <p style={{ color: "black" }}><strong>姓名：</strong> {response.name}</p>
+          <p style={{ color: "black" }}><strong>信心度：</strong> {response.confidence}</p>
         </div>
       )}
     </div>
